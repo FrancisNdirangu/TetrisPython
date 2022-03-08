@@ -4,6 +4,7 @@ import pygame
 import numpy as np
 pygame.init()
 
+clock = pygame.time.Clock()
 screen = pygame.display.set_mode((590,960))
 
 
@@ -33,8 +34,9 @@ running = True
 
 while running:
     pygame.display.flip()
+    clock.tick(60)
     screen.blit(background_img,(0,0))
-    locationy += 0.3
+    locationy += 2
     if locationy > 810:
         locationy = 810
     screen.blit(shape_chosen[index_shape],(locationx,locationy))
