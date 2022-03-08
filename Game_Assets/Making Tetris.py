@@ -80,6 +80,9 @@ while running:
                 shape_chosenrect[index_shape].left -= 10
                 if shape_chosenrect[index_shape].left < -15:
                     shape_chosenrect[index_shape].left = -15
+            if event.key == pygame.K_UP: #this code doesnt work. the reason is because we set shape_chosen[index_shape].bottom to a constant. the bottom must change as the shape rotates for this to work
+                shape_chosenrect[index_shape] = pygame.transform.rotate(shape_chosenrect[index_shape],90)
+                shape_chosen[index_shape] = pygame.transform.rotate(shape_chosen[index_shape],90)
         
 
 
