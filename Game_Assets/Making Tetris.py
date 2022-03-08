@@ -39,7 +39,7 @@ T_shaperect = T_shape.get_rect(midbottom = (locationx,locationy))
 
 shape_chosen = [I_shape,L_shape,O_shape,Z_shape,T_shape]
 shape_chosenrect = [I_shaperect,L_shaperect,O_shaperect,Z_shaperect,T_shaperect]
-index_shape = np.random.randint(0,(len(shape_chosen)+1))
+index_shape = np.random.randint(0,(len(shape_chosen)))
 
 
 print(index_shape)
@@ -71,6 +71,16 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RIGHT:
+                shape_chosenrect[index_shape].right += 10
+                if shape_chosenrect[index_shape].right > 470:
+                    shape_chosenrect[index_shape].right = 470
+            if event.key == pygame.K_LEFT:
+                shape_chosenrect[index_shape].left -= 10
+                if shape_chosenrect[index_shape].left < -15:
+                    shape_chosenrect[index_shape].left = -15
+        
 
 
     
