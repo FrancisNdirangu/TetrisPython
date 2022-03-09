@@ -84,7 +84,7 @@ while running:
                 shape_chosenrect[index_shape] = pygame.transform.rotate(shape_chosenrect[index_shape],90)
                 shape_chosen[index_shape] = pygame.transform.rotate(shape_chosen[index_shape],90)
         
-
+#haha
 
     
 
