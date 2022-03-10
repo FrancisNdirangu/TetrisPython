@@ -85,8 +85,10 @@ while running:
                 #shape_chosenrect[index_shape] = pygame.transform.rotate(shape_chosenrect[index_shape],90) the code doesnt work when i try to rotate the rectangle surface as well
                 #i would have to test collisions to see if the rectangle is actually rotating 
                 
-        
-#haha
+        #to make new shapes appear i can check if the velocity of the shape is zero. if that is the case then a new shape should be called
+        #we can also make new shapes appear when we sense a collision between the falling shape and anything else
+        #i can then also make another if statement to produce new shapes when the "floor" is reached since I dont know how to make 
+
 
     
 
