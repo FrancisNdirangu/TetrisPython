@@ -62,6 +62,9 @@ while running:
         shape_chosenrect[i].bottom +=2
         if shape_chosenrect[i].bottom > 990:
             shape_chosenrect[i].bottom = 990
+            #i should store the location and shape in a dictionary in a list
+            #i should then generate a new shape
+
 
 
     
@@ -88,6 +91,7 @@ while running:
         #to make new shapes appear i can check if the velocity of the shape is zero. if that is the case then a new shape should be called
         #we can also make new shapes appear when we sense a collision between the falling shape and anything else
         #i can then also make another if statement to produce new shapes when the "floor" is reached since I dont know how to make 
+    
 
 
     
