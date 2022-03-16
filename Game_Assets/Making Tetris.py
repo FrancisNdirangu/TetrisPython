@@ -46,6 +46,7 @@ print(index_shape)
 
 running = True
 
+location_tracker_horizontal = 250
 while running:
     pygame.display.flip()
     clock.tick(60)
@@ -62,11 +63,14 @@ while running:
         shape_chosenrect[i].bottom +=2
         if shape_chosenrect[i].bottom > 990:
             shape_chosenrect[i].bottom = 990
+            print("the final location is ",location_tracker_horizontal)
+            #i should also find a way of ensuring that the shapes cannot move once they are in their final position and in order to do that I need to save their coordinates
             #i should store the location and shape in a dictionary in a list
             #i should then generate a new shape
 
 
-
+    #location tracker
+    
     
 
     screen.blit(shape_chosen[index_shape],shape_chosenrect[index_shape])
@@ -77,10 +81,16 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
                 shape_chosenrect[index_shape].right += 10
+                location_tracker_horizontal += 10
+                if location_tracker_horizontal >400:
+                    location_tracker_horizontal = 400
                 if shape_chosenrect[index_shape].right > 470:
                     shape_chosenrect[index_shape].right = 470
             if event.key == pygame.K_LEFT:
                 shape_chosenrect[index_shape].left -= 10
+                location_tracker_horizontal -= 10
+                if location_tracker_horizontal < 50:
+                    location_tracker_horizontal = 50
                 if shape_chosenrect[index_shape].left < -15:
                     shape_chosenrect[index_shape].left = -15
             if event.key == pygame.K_UP: #this code doesnt work. the reason is because we set shape_chosen[index_shape].bottom to a constant. the bottom must change as the shape rotates for this to work
