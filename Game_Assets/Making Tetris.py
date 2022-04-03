@@ -18,23 +18,28 @@ locationy = 150
 
 
 I_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/I/1.png')
-I_shape = pygame.transform.scale(I_shape,(200,200))
+#I_shape = pygame.transform.scale(I_shape,(200,200))
+I_shape = pygame.transform.rotozoom(I_shape,0,0.3)
 I_shaperect = I_shape.get_rect(midbottom = (locationx,locationy))
 
 L_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/L/L.png')
-L_shape = pygame.transform.scale(L_shape,(200,200))
+#L_shape = pygame.transform.scale(L_shape,(200,200))
+L_shape = pygame.transform.rotozoom(L_shape,0,0.3)
 L_shaperect = L_shape.get_rect(midbottom = (locationx,locationy))
 
 O_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/R/R.png')
-O_shape = pygame.transform.scale(O_shape,(200,200))
+#O_shape = pygame.transform.scale(O_shape,(200,200))
+O_shape = pygame.transform.rotozoom(O_shape,0,0.3)
 O_shaperect = O_shape.get_rect(midbottom = (locationx,locationy))
 
 Z_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/S/S.png')
-Z_shape = pygame.transform.scale(Z_shape,(200,200))
+# Z_shape = pygame.transform.scale(Z_shape,(200,200))
+Z_shape = pygame.transform.rotozoom(Z_shape,0,0.3)
 Z_shaperect = Z_shape.get_rect(midbottom = (locationx,locationy))
 
 T_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/T/T_2.png')
-T_shape = pygame.transform.scale(T_shape,(200,200))
+# T_shape = pygame.transform.scale(T_shape,(200,200))
+T_shape = pygame.transform.rotozoom(T_shape,0,0.3)
 T_shaperect = T_shape.get_rect(midbottom = (locationx,locationy))
 
 shape_chosen = [I_shape,L_shape,O_shape,Z_shape,T_shape]
@@ -42,7 +47,7 @@ shape_chosenrect = [I_shaperect,L_shaperect,O_shaperect,Z_shaperect,T_shaperect]
 index_shape = np.random.randint(0,(len(shape_chosen)))
 
 
-print(index_shape)
+#print(index_shape)
 
 running = True
 
@@ -56,15 +61,13 @@ while running:
         shape_chosenrect[i].bottom +=2
         if shape_chosenrect[i].bottom > 990:
             shape_chosenrect[i].bottom = 990
-            print("the final location is ",location_tracker_horizontal)
+            #print("the final location is ",location_tracker_horizontal)
             #i should also find a way of ensuring that the shapes cannot move once they are in their final position and in order to do that I need to save their coordinates
             #i should store the location and shape in a dictionary in a list
             #i should then generate a new shape
 
 
     #location tracker
-    
-    
 
     screen.blit(shape_chosen[index_shape],shape_chosenrect[index_shape])
 
