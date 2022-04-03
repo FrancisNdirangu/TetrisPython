@@ -18,27 +18,22 @@ locationy = 150
 
 
 I_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/I/1.png')
-#I_shape = pygame.transform.scale(I_shape,(200,200))
 I_shape = pygame.transform.rotozoom(I_shape,0,0.3)
 I_shaperect = I_shape.get_rect(midbottom = (locationx,locationy))
 
 L_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/L/L.png')
-#L_shape = pygame.transform.scale(L_shape,(200,200))
 L_shape = pygame.transform.rotozoom(L_shape,0,0.3)
 L_shaperect = L_shape.get_rect(midbottom = (locationx,locationy))
 
 O_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/R/R.png')
-#O_shape = pygame.transform.scale(O_shape,(200,200))
 O_shape = pygame.transform.rotozoom(O_shape,0,0.3)
 O_shaperect = O_shape.get_rect(midbottom = (locationx,locationy))
 
 Z_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/S/S.png')
-# Z_shape = pygame.transform.scale(Z_shape,(200,200))
 Z_shape = pygame.transform.rotozoom(Z_shape,0,0.3)
 Z_shaperect = Z_shape.get_rect(midbottom = (locationx,locationy))
 
 T_shape = pygame.image.load('C:/Users/franc/Downloads/Tetris-game-assets/Game_Assets/T/T_2.png')
-# T_shape = pygame.transform.scale(T_shape,(200,200))
 T_shape = pygame.transform.rotozoom(T_shape,0,0.3)
 T_shaperect = T_shape.get_rect(midbottom = (locationx,locationy))
 
