@@ -53,9 +53,17 @@ while running:
     screen.blit(background_img,(0,0))
 
     for i in range(len(shape_chosenrect)):
-        shape_chosenrect[i].bottom +=2
-        if shape_chosenrect[i].bottom > 990:
-            shape_chosenrect[i].bottom = 990
+        shape_chosenrect[i].bottom +=10
+        if I_shaperect.bottom > 970:
+            I_shaperect.bottom = 970
+        if L_shaperect.bottom > 985:
+            L_shaperect.bottom = 985
+        if Z_shaperect.bottom > 1000:
+            Z_shaperect.bottom = 1000
+        if T_shaperect.bottom > 1000:
+            T_shaperect.bottom = 1000
+        if O_shaperect.bottom > 1000:
+            O_shaperect.bottom = 1000
             #print("the final location is ",location_tracker_horizontal)
             #i should also find a way of ensuring that the shapes cannot move once they are in their final position and in order to do that I need to save their coordinates
             #i should store the location and shape in a dictionary in a list
@@ -73,17 +81,38 @@ while running:
             if event.key == pygame.K_RIGHT:
                 shape_chosenrect[index_shape].right += 10
                 location_tracker_horizontal = shape_chosenrect[index_shape].right
+                if I_shaperect.right > 495:
+                    I_shaperect.right = 495
+                if L_shaperect.right > 500:
+                    L_shaperect.right = 500
+                if Z_shaperect.right > 465:
+                    Z_shaperect.right = 465
+                if T_shaperect.right > 500:
+                    T_shaperect.right = 500
+                if O_shaperect.right > 480:
+                    O_shaperect.right = 480
+                
                 # if location_tracker_horizontal >400:
                 #     location_tracker_horizontal = 400 #setting a limit on the location tracker to know boundary has been reached
-                if shape_chosenrect[index_shape].right > 465:
-                    shape_chosenrect[index_shape].right = 465
+                #if shape_chosenrect[index_shape].right > 465:
+                 #   shape_chosenrect[index_shape].right = 465
             if event.key == pygame.K_LEFT:
                 shape_chosenrect[index_shape].left -= 10
                 location_tracker_horizontal -= 10
                 # if location_tracker_horizontal < -50:
                 #     location_tracker_horizontal = -50 #setting a limit on the location tracker to know boundary has been reached
-                if shape_chosenrect[index_shape].left < -50:
-                    shape_chosenrect[index_shape].left = -50
+                if I_shaperect.left < -55:
+                    I_shaperect.left = -55
+                if L_shaperect.left < -40:
+                    L_shaperect.left = -40
+                if Z_shaperect.left < -20:
+                    Z_shaperect.left = -20
+                if T_shaperect.left < 0:
+                    T_shaperect.left = 0
+                if O_shaperect.left < -35:
+                    O_shaperect.left = -35
+                # if shape_chosenrect[index_shape].left < -50:
+                #     shape_chosenrect[index_shape].left = -50
             if event.key == pygame.K_UP: #this code doesnt work. the reason is because we set shape_chosen[index_shape].bottom to a constant. the bottom must change as the shape rotates for this to work
                 shape_chosen[index_shape] = pygame.transform.rotate(shape_chosen[index_shape],90) #the code works when i only rotate the image
                 #shape_chosenrect[index_shape] = pygame.transform.rotate(shape_chosenrect[index_shape],90) the code doesnt work when i try to rotate the rectangle surface as well
