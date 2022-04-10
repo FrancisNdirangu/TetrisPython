@@ -36,9 +36,9 @@ class MovingObjects(pygame.sprite.Sprite):
         self.shape_chosenrect.y += 2
 
         key = pygame.key.get_pressed()
-        if event.type == key[KEY_RIGHT]:
+        if event.type == key[K_RIGHT]:
             self.shape_chosenrect.x += 10
-        if event.type == key[KEY_LEFT]:
+        if event.type == key[K_LEFT]:
             self.shape_chosenrect.x -= 10
 
 
