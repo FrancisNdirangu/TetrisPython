@@ -31,6 +31,10 @@ class MovingObjects(pygame.sprite.Sprite):
         self.shapes = [T_shape,Z_shape,O_shape,L_shape,I_shape]
         #this will be the shape that we are controlling
         self.shape_chosen = self.shapes[random.randint(0,len(self.shapes))]
+
+        spawning_x_position = 212
+        spawning_y_position = 150
+        self.shape_chosenrect = self.shape_chosen.get_rect(midbottom = (spawning_x_position,spawning_y_position))
     
     def movement(self):
         self.shape_chosenrect.y += 2
