@@ -36,9 +36,11 @@ class MovingObjects(pygame.sprite.Sprite):
         self.shape_chosenrect.y += 2
 
         key = pygame.key.get_pressed()
-        if event.type == key[K_RIGHT]:
-            self.shape_chosenrect.x += 10
-        if event.type == key[K_LEFT]:
+        if key[pygame.K_RIGHT]:
+            self.shape_chosenrect.x += 10  #moving the shape by refering to the rectangle of the shape
+        if key[pygame.K_LEFT]:
             self.shape_chosenrect.x -= 10
+        if key[pygame.K_SPACE]:
+            self.shape_chosenrect = pygame.transform.rotate(self.shape_chosenrect,90)
 
 
