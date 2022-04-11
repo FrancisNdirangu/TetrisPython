@@ -35,9 +35,13 @@ class MovingObjects(pygame.sprite.Sprite):
         spawning_x_position = 212
         spawning_y_position = 150
         self.shape_chosenrect = self.shape_chosen.get_rect(midbottom = (spawning_x_position,spawning_y_position))
-    
-    def movement(self):
+
+    def pieces_movement_boundaries(self):
         self.shape_chosenrect.y += 2
+        if self.shape_chosenrect.y > 990:
+            self.shape_chosenrect.y =990
+    
+    def controlled_movement(self):
 
         key = pygame.key.get_pressed()
         if key[pygame.K_RIGHT]:
