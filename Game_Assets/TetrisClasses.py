@@ -41,7 +41,7 @@ class MovingObjects(pygame.sprite.Sprite):
         if self.shape_chosenrect.y > 990:
             self.shape_chosenrect.y =990
         
-        #the y_boundaries for each shape
+        #the y_boundaries for each shape, find out if the shapes need a self infront of them since they are constants
         if self.I_shaperect.bottom > 970:
             self.I_shaperect.bottom = 970
         if self.L_shaperect.bottom > 985:
