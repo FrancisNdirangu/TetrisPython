@@ -42,40 +42,40 @@ class MovingObjects(pygame.sprite.Sprite):
             self.shape_chosenrect.y =990
         
         #the y_boundaries for each shape, find out if the shapes need a self infront of them since they are constants
-        if self.I_shaperect.bottom > 970:
-            self.I_shaperect.bottom = 970
-        if self.L_shaperect.bottom > 985:
-            self.L_shaperect.bottom = 985
-        if self.Z_shaperect.bottom > 1000:
-            self.Z_shaperect.bottom = 1000
-        if self.T_shaperect.bottom > 1000:
-            self.T_shaperect.bottom = 1000
-        if self.O_shaperect.bottom > 1000:
+        if self.I_shape.bottom > 970:
+            self.I_shape.bottom = 970
+        if self.L_shape.bottom > 985:
+            self.L_shape.bottom = 985
+        if self.Z_shape.bottom > 1000:
+            self.Z_shape.bottom = 1000
+        if self.T_shape.bottom > 1000:
+            self.T_shape.bottom = 1000
+        if self.O_shape.bottom > 1000:
             self.O_shaperect.bottom = 1000
 
         #boundaries to the right
-        if self.I_shaperect.right > 495:
-            self.I_shaperect.right = 495
-        if self.L_shaperect.right > 500:
-            self.L_shaperect.right = 500
-        if self.Z_shaperect.right > 465:
-            self.Z_shaperect.right = 465
-        if self.T_shaperect.right > 500:
-            self.T_shaperect.right = 500
-        if self.O_shaperect.right > 480:
-            self.O_shaperect.right = 480
+        if self.I_shape.right > 495:
+            self.I_shape.right = 495
+        if self.L_shape.right > 500:
+            self.L_shape.right = 500
+        if self.Z_shape.right > 465:
+            self.Z_shape.right = 465
+        if self.T_shape.right > 500:
+            self.T_shape.right = 500
+        if self.O_shape.right > 480:
+            self.O_shape.right = 480
 
         #boundaries to the right
-        if self.I_shaperect.left < -55:
-            self.I_shaperect.left = -55
-        if self.L_shaperect.left < -40:
-            self.L_shaperect.left = -40
-        if self.Z_shaperect.left < -20:
-            self.Z_shaperect.left = -20
-        if self.T_shaperect.left < 0:
-            self.T_shaperect.left = 0
-        if self.O_shaperect.left < -35:
-            self.O_shaperect.left = -35
+        if self.I_shape.left < -55:
+            self.I_shape.left = -55
+        if self.L_shape.left < -40:
+            self.L_shape.left = -40
+        if self.Z_shape.left < -20:
+            self.Z_shape.left = -20
+        if self.T_shape.left < 0:
+            self.T_shape.left = 0
+        if self.O_shape.left < -35:
+            self.O_shape.left = -35
     
     def controlled_movement(self):
         key = pygame.key.get_pressed()
